@@ -1,17 +1,19 @@
-<div class="row">
+<div class="row mb-5">
   {{!-- create two columns --}}
   <div class="col-12 col-md-3">
     <h2>add burger</h2>
-    <form id="burger-form">
+    <form id="burgers-form">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="createburger " name="burger_menu_item" />
       </div>
       <button class="btn btn-block btn-outline-success">order a burger</button>
     </form>
   </div>
-
+</div>
+  <div class="row">
   <div class="col-12 col-md-9">
-    <div class="card"><h3>Burger not finished</h3>
+    <div class="card" mb-5>
+      <h3>Burger not finished</h3>
     <ul class="list-group-flush">
 
     </ul>
@@ -22,9 +24,13 @@
       </h3>
       <ul class="list-group-flush">
         {{!-- loop through cats from handlebars and print out cats that are NOT adopted --}}
-        {{#each burger}}
-        {{#unless this.}}
+        {{#each burgers}}
+        {{#unless this.Devour}}
         <li class="list-group-item d-flex justify-content-between align-items-center align-center">
+          <button type="button" class="btn btn-outline-light mr-3 deleteburgers" data-burgerid="{{this.id}}"><i class="fas fa-times"></i></button>
+          
+        
+          
           <h4>{{this.burgers_menu_item}}</h4>
           <div>
             {{!-- adopt a cat --}}
@@ -54,7 +60,7 @@
           <h4>{{this.burgers_name}}</h4>
           <div>
             {{!-- delete a cat --}}
-            <button class="btn btn-danger  deleteBurgers" data-burgerId="{{this.id}}">
+            <button class="btn btn-danger  regurgitate" data-burgerId="{{this.id}}">
              Devour it!
             </button>
           </div>

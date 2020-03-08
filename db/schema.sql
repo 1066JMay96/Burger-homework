@@ -8,6 +8,7 @@ USE burger_db;
 CREATE TABLE burgers (
   id INT NOT NULL AUTO_INCREMENT,
   burger_menu_item VARCHAR(55) NOT NULL,
+  devoured BOOLEAN Default false NOT NULL,
   PRIMARY KEY (id)
 );
 
