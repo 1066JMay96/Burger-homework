@@ -31,9 +31,9 @@ const updateBurgers = (burgersObj, burgersId) => {
         return reject(err);
     } 
     else if (burgersData.affectedRows === 0){
-   return resolve({message: "Couldn't find that burger item!"});
+   return resolve({message: "Couldn't find that burger item!", code: 404});
    }
-      resolve({ message: 'burgers menu updated successfully!' })
+      resolve({ message: 'burgers menu updated successfully!', code:200 })
     })
   })
 }

@@ -7,12 +7,12 @@ USE burger_db;
 
 CREATE TABLE burgers (
   id INT NOT NULL AUTO_INCREMENT,
-  burger_name VARCHAR(55) NOT NULL,
+  burger_menu_item VARCHAR(55) NOT NULL,
   PRIMARY KEY (id)
 );
 
 INSERT INTO burgers
-
+(burger_menu_item)
 VALUES
 ('CheeseBurger'),
 ('VeggieBurger'),

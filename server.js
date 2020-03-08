@@ -10,7 +10,7 @@ const connection = require('./config/connection');
 const routes = require('./routes');
 
 app.use(express.json());
-app.use(express.urlencoded({exptended: true}));
+app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }));
